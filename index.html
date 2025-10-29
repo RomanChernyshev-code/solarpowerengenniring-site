@@ -1,680 +1,231 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/index.html b/index.html
-index b9e03d4835ec268a99419660957c85a07c0e3b77..bdd1a2c0932afbd38d0598ea2bb786a06465ac5c 100644
---- a/index.html
-+++ b/index.html
-@@ -1,298 +1,300 @@
- <!DOCTYPE html>
- <html lang="uk">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Бригантина — сучасне п'ятиборство та плавання</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="styles.css">
- </head>
- <body>
-     <header class="hero" id="top">
-         <nav class="navbar">
-             <a class="logo" href="#top">Brigantina</a>
-             <button class="menu-toggle" aria-label="Відкрити меню" aria-expanded="false">☰</button>
-             <ul class="nav-links">
-                 <li><a href="#about">Про клуб</a></li>
-                 <li><a href="#disciplines">Дисципліни</a></li>
-                 <li><a href="#programs">Групи</a></li>
-                 <li><a href="#team">Тренери</a></li>
-                 <li><a href="#athletes">Спортсмени</a></li>
-                 <li><a href="#facility">Інфраструктура</a></li>
-+                <li><a href="#media">Галерея</a></li>
-+                <li><a href="#instagram">Instagram</a></li>
-                 <li><a href="#schedule">Розклад</a></li>
-                 <li><a href="#pricing">Абонементи</a></li>
-                 <li><a href="#faq">FAQ</a></li>
-                 <li><a href="#contact">Контакти</a></li>
-             </ul>
-         </nav>
-         <div class="hero-inner">
--            <div class="hero-copy">
-+            <div class="hero-copy" data-reveal>
-                 <span class="hero-label">Київ · Кільцева дорога, 3-а</span>
-                 <h1>Спортивний клуб «Бригантина»</h1>
-                 <p>База сучасного п'ятиборства, плавання та фехтування з професійними тренерами та міжнародними спортсменами. Виховуємо чемпіонів та створюємо спільноту сильних.</p>
-                 <ul class="hero-tags">
-                     <li>Сучасне п'ятиборство</li>
-                     <li>Плавання</li>
-                     <li>Фехтування</li>
-                     <li>Laser-run / OCR</li>
-                 </ul>
-                 <div class="hero-actions">
-                     <a class="btn primary" href="#contact">Записатися</a>
-                     <a class="btn outline" href="#programs">Переглянути програми</a>
-                 </div>
-                 <dl class="hero-stats">
-                     <div>
-                         <dt>15+ років</dt>
-                         <dd>тренерського досвіду</dd>
-                     </div>
-                     <div>
-                         <dt>20 медалей</dt>
-                         <dd>чемпіонатів Європи та світу</dd>
-                     </div>
-                     <div>
-                         <dt>4 дисципліни</dt>
-                         <dd>на одній сучасній базі</dd>
-                     </div>
-                 </dl>
-             </div>
--            <div class="hero-media">
-+            <div class="hero-media" data-reveal>
-                 <figure class="hero-poster">
-                     <img src="https://images.unsplash.com/photo-1508599589920-14cfa1c1fe4e?auto=format&fit=crop&w=1300&q=80" alt="Спортсмени клубу «Бригантина»" loading="lazy">
-                 </figure>
-                 <div class="hero-card">
-                     <p class="hero-card-title">Elite Modern Pentathlon</p>
-                     <p>Комплексний супровід від першого старту до міжнародних п'єдесталів. Команда тренерів і медіа-підтримка на кожному етапі.</p>
-                 </div>
-             </div>
-         </div>
-     </header>
- 
-     <main>
-         <section class="section about" id="about">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Про клуб</span>
-                 <h2>Професійна академія п'ятиборства в серці Києва</h2>
-                 <p>«Бригантина» поєднує секції плавання, фехтування, лазер-рану та OCR. Ми працюємо з дітьми, юніорами й дорослими спортсменами, допомагаючи досягати результатів у кожній дисципліні.</p>
-             </div>
--            <div class="about-layout">
-+            <div class="about-layout" data-reveal>
-                 <article class="about-highlight">
-                     <h3>Повний цикл підготовки</h3>
-                     <p>Тренування проходять у власних басейні, фехтувальній залі, тирі для лазер-рану та зоні функціональної підготовки. Використовуємо відеоаналіз, контроль навантажень і супровід спортивних лікарів.</p>
-                     <p>Завдяки індивідуальній траєкторії розвитку, спортсмени клубу системно виходять на міжнародні старти та здобувають медалі чемпіонатів Європи й світу.</p>
-                 </article>
-                 <ul class="about-list">
-                     <li>
-                         <h4>Командний підхід</h4>
-                         <p>Тренери з плавання, фехтування та OCR працюють синхронно, щоб ви отримували чіткий план на сезон.</p>
-                     </li>
-                     <li>
-                         <h4>Міжнародний досвід</h4>
-                         <p>Наставники клубу — учасники та призери світових турнірів, які знають вимоги найвищого рівня.</p>
-                     </li>
-                     <li>
-                         <h4>Підтримка сімей</h4>
-                         <p>Допомагаємо батькам відстежувати прогрес дітей та пропонуємо програми для всієї родини.</p>
-                     </li>
-                 </ul>
-             </div>
-         </section>
- 
-         <section class="section highlights">
--            <div class="highlights-grid">
-+            <div class="highlights-grid" data-reveal>
-                 <article>
-                     <h3>Для кого?</h3>
-                     <p>Для дітей 7+ років, юнаків, професійних атлетів та аматорів, які хочуть вивчати сучасне п'ятиборство або окремі дисципліни.</p>
-                 </article>
-                 <article>
-                     <h3>Що отримуєте?</h3>
-                     <p>Системний план тренувань, участь у зборах і змаганнях, команду однодумців та постійну підтримку наставників.</p>
-                 </article>
-                 <article>
-                     <h3>Як стартувати?</h3>
-                     <p>Залиште заявку на пробне тренування — ми проведемо тестування й запропонуємо програму, що відповідає вашому рівню.</p>
-                 </article>
-             </div>
-         </section>
- 
-         <section class="section disciplines" id="disciplines">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Дисципліни</span>
-                 <h2>Повний набір сучасного п'ятиборства</h2>
-                 <p>Усі елементи тренувального процесу знаходяться на одній базі. Це дає змогу поєднувати роботу над технікою, витривалістю та психологією старту.</p>
-             </div>
--            <div class="grid cards">
-+            <div class="grid cards" data-reveal>
-                 <article class="card">
-                     <h3>Плавання</h3>
-                     <p>50-метровий басейн, відеоаналіз під водою, корекція техніки й робота над стартами та поворотами.</p>
-                 </article>
-                 <article class="card">
-                     <h3>Фехтування</h3>
-                     <p>Шпага та рапіра. Тактичні схеми, реакція, багатогодинні спаринги з детальним розбором.</p>
-                 </article>
-                 <article class="card">
-                     <h3>Laser-run / OCR</h3>
-                     <p>Комбіновані сесії бігу зі стрільбою та перешкодними модулями. Сучасне обладнання для точності.</p>
-                 </article>
-                 <article class="card">
-                     <h3>Функціональна підготовка</h3>
-                     <p>Силові блоки, мобільність, робота з фізіотерапевтами та відновлення у спеціальній зоні.</p>
-                 </article>
-             </div>
-         </section>
- 
-         <section class="section programs" id="programs">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Групи</span>
-                 <h2>Програми для різного рівня підготовки</h2>
-                 <p>Оберіть напрям, що відповідає цілям: від перших знайомств зі спортом до професійних стартів на міжнародній арені.</p>
-             </div>
--            <div class="grid program-grid">
-+            <div class="grid program-grid" data-reveal>
-                 <article class="program-card">
-                     <h3>Пробний старт</h3>
-                     <p class="program-sub">1 місяць</p>
-                     <ul>
-                         <li>Тестування здібностей</li>
-                         <li>2 тренування з плавання</li>
-                         <li>1 тренування з фехтування</li>
-                         <li>Індивідуальний зворотний зв'язок</li>
-                     </ul>
-                 </article>
-                 <article class="program-card">
-                     <h3>Юніорська команда</h3>
-                     <p class="program-sub">5 занять на тиждень</p>
-                     <ul>
-                         <li>Контрольні старти</li>
-                         <li>Модулі Laser-run / OCR</li>
-                         <li>План відновлення</li>
-                         <li>Менторство головних тренерів</li>
-                     </ul>
-                 </article>
-                 <article class="program-card">
-                     <h3>Pro-п'ятиборство</h3>
-                     <p class="program-sub">Індивідуально</p>
-                     <ul>
-                         <li>Персональна періодизація</li>
-                         <li>Відеоаналіз кожної дисципліни</li>
-                         <li>Підготовка до міжнародних стартів</li>
-                         <li>Супровід на змаганнях</li>
-                     </ul>
-                 </article>
-                 <article class="program-card">
-                     <h3>Індивідуальні заняття</h3>
-                     <p class="program-sub">За попереднім записом</p>
-                     <ul>
-                         <li>Особистий тренер</li>
-                         <li>Гнучкий графік</li>
-                         <li>Робота над технікою</li>
-                         <li>Підготовка до нормативів</li>
-                     </ul>
-                 </article>
-             </div>
-         </section>
- 
-         <section class="section timeline">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Шлях спортсмена</span>
-                 <h2>Як проходить навчання у «Бригантині»</h2>
-                 <p>Від першого знайомства до участі в чемпіонатах ми супроводжуємо кожного спортсмена та його родину.</p>
-             </div>
--            <div class="timeline-list">
-+            <div class="timeline-list" data-reveal>
-                 <article>
-                     <span class="step">01</span>
-                     <h3>Знайомство та тестування</h3>
-                     <p>Зустріч із тренером, функціональне тестування й добір оптимальної програми.</p>
-                 </article>
-                 <article>
-                     <span class="step">02</span>
-                     <h3>Навчання техніці</h3>
-                     <p>Освоюємо базові елементи плавання, фехтування й лазер-рану, формуємо рухові навички.</p>
-                 </article>
-                 <article>
-                     <span class="step">03</span>
-                     <h3>Участь у стартах</h3>
-                     <p>Проводимо контрольні змагання, готуємо до офіційних турнірів і підтримуємо психологічно.</p>
-                 </article>
-                 <article>
-                     <span class="step">04</span>
-                     <h3>Міжнародний рівень</h3>
-                     <p>Супроводжуємо на етапах Кубка світу, організовуємо збори й забезпечуємо командний штаб.</p>
-                 </article>
-             </div>
-         </section>
- 
-         <section class="section team" id="team">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Тренери</span>
-                 <h2>Наставники клубу «Бригантина»</h2>
-                 <p>Команда сертифікованих тренерів, які пройшли міжнародні збори та підготували десятки чемпіонів.</p>
-             </div>
--            <div class="person-grid">
-+            <div class="person-grid" data-reveal>
-                 <article class="person-card">
-                     <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=900&q=80" alt="Георгій Романов" class="person-photo" loading="lazy">
-                     <div class="person-info">
-                         <h3>Георгій Романов</h3>
-                         <p class="person-role">Тренер з OCR та лазер-рану</p>
-                         <p>Відповідає за бігові блоки, стрільбу та функціональну підготовку. Працює з основною командою й юніорами.</p>
-                     </div>
-                 </article>
-                 <article class="person-card">
-                     <img src="https://images.unsplash.com/photo-1543168256-418811576931?auto=format&fit=crop&w=900&q=80" alt="Анна Деркач" class="person-photo" loading="lazy">
-                     <div class="person-info">
-                         <h3>Анна Деркач</h3>
-                         <p class="person-role">Тренерка з фехтування</p>
-                         <p>Майстер спорту міжнародного класу. Розробляє тактичні схеми та проводить індивідуальні заняття зі шпаги.</p>
-                     </div>
-                 </article>
-                 <article class="person-card">
-                     <img src="https://images.unsplash.com/photo-1508835276880-6a7d6220d56a?auto=format&fit=crop&w=900&q=80" alt="Руслан Мосейкін" class="person-photo" loading="lazy">
-                     <div class="person-info">
-                         <h3>Руслан Мосейкін</h3>
-                         <p class="person-role">Старший тренер з плавання</p>
-                         <p>Коригує техніку, працює над стартами та витривалістю. Веде групи від початківців до збірної України.</p>
-                     </div>
-                 </article>
-                 <article class="person-card">
-                     <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Загорія В'ячеслава Станіславівна" class="person-photo" loading="lazy">
-                     <div class="person-info">
-                         <h3>Загорія В'ячеслава Станіславівна</h3>
-                         <p class="person-role">Директорка та головна тренерка клубу</p>
-                         <p>Керує стратегією розвитку клубу, формує програми й супроводжує провідних спортсменів на міжнародній арені.</p>
-                     </div>
-                 </article>
-             </div>
-         </section>
- 
-         <section class="section athletes" id="athletes">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Команда</span>
-                 <h2>Спортсмени клубу</h2>
-                 <p>Атлети «Бригантини» стабільно представляють Україну на чемпіонатах Європи та світу, здобуваючи медалі у сучасному п'ятиборстві.</p>
-             </div>
--            <div class="person-grid">
-+            <div class="person-grid" data-reveal>
-                 <article class="person-card">
-                     <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=900&q=80" alt="Чернишев Роман" class="person-photo" loading="lazy">
-                     <div class="person-info">
-                         <h3>Чернишев Роман</h3>
-                         <p class="person-role">Учасник чемпіонатів Європи та світу</p>
-                         <p>Сильний плавець і стрілець. Набирає ключові очки у комбінованих дисциплінах на міжнародних стартах.</p>
-                     </div>
-                 </article>
-                 <article class="person-card">
-                     <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80" alt="Чернишев Олександр" class="person-photo" loading="lazy">
-                     <div class="person-info">
-                         <h3>Чернишев Олександр</h3>
-                         <p class="person-role">Призер чемпіонатів Європи та світу</p>
-                         <p>Відзначається стабільністю у фехтуванні й бігу. Входить до складу основної збірної України.</p>
-                     </div>
-                 </article>
-                 <article class="person-card">
-                     <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=900&q=80" alt="Мельник Олександр" class="person-photo" loading="lazy">
-                     <div class="person-info">
-                         <h3>Мельник Олександр</h3>
-                         <p class="person-role">Призер чемпіонатів Європи та світу</p>
-                         <p>Спеціаліст із комбінованих естафет. Допомагає молодшим спортсменам адаптуватися до міжнародних стартів.</p>
-                     </div>
-                 </article>
-                 <article class="person-card">
-@@ -301,82 +303,169 @@
-                         <h3>Клименко Олександр</h3>
-                         <p class="person-role">Призер чемпіонатів Європи та світу</p>
-                         <p>Фехтувальник з агресивним стилем, демонструє високі результати у лазер-рані та командних стартах.</p>
-                     </div>
-                 </article>
-                 <article class="person-card">
-                     <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=80" alt="Резнік Єлизавета" class="person-photo" loading="lazy">
-                     <div class="person-info">
-                         <h3>Резнік Єлизавета</h3>
-                         <p class="person-role">Учасниця чемпіонатів Європи та світу</p>
-                         <p>Поєднує високошвидкісне плавання та точну стрільбу. Проводить майстер-класи для юних спортсменок.</p>
-                     </div>
-                 </article>
-                 <article class="person-card">
-                     <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80" alt="Лазаренко Олеся" class="person-photo" loading="lazy">
-                     <div class="person-info">
-                         <h3>Лазаренко Олеся</h3>
-                         <p class="person-role">Учасниця чемпіонатів Європи та світу</p>
-                         <p>Вражає фінішним колом у бігу та стабільністю у фехтуванні. Представляє клуб у змішаних естафетах.</p>
-                     </div>
-                 </article>
-             </div>
-         </section>
- 
-         <section class="section facility" id="facility">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Інфраструктура</span>
-                 <h2>Все необхідне в одному місці</h2>
-                 <p>Тренувальна база «Бригантини» дозволяє проводити повний цикл підготовки з комфортом і безпекою.</p>
-             </div>
--            <div class="grid facility-grid">
-+            <div class="grid facility-grid" data-reveal>
-                 <article>
-                     <h3>Олімпійський басейн</h3>
-                     <p>50 м з системою контролю якості води, стартовими тумбами та трибунами для проведення стартів.</p>
-                 </article>
-                 <article>
-                     <h3>Фехтувальна зала</h3>
-                     <p>Кілька доріжок, електронні системи підрахунку та відеофіксація для розбору техніки.</p>
-                 </article>
-                 <article>
-                     <h3>Тир і OCR-зона</h3>
-                     <p>Лазерні мішені, бігові доріжки, модулі перешкод і зона функціональних тренувань.</p>
-                 </article>
-                 <article>
-                     <h3>Медичний супровід</h3>
-                     <p>Фізіотерапія, масажні кабінети й кімнати відновлення для швидкого прогресу та профілактики травм.</p>
-                 </article>
-             </div>
-         </section>
- 
-+        <section class="section media" id="media">
-+            <div class="section-header" data-reveal>
-+                <span class="eyebrow">Галерея</span>
-+                <h2>Атмосфера тренувань та змагань</h2>
-+                <p>Кадри із зборів, тренувань та міжнародних стартів клубу. Відчуйте драйв команди «Бригантина».</p>
-+            </div>
-+            <div class="gallery-grid" data-reveal>
-+                <figure class="gallery-item">
-+                    <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1200&q=80" alt="Розминка перед стартом">
-+                    <figcaption>
-+                        <span class="gallery-tag">Training Camp</span>
-+                        <p>Розминка на ранковій сесії з командою юніорів.</p>
-+                    </figcaption>
-+                </figure>
-+                <figure class="gallery-item">
-+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80" alt="Фехтувальні спаринги">
-+                    <figcaption>
-+                        <span class="gallery-tag">Fencing</span>
-+                        <p>Фехтувальні спаринги з детальним аналізом тактики.</p>
-+                    </figcaption>
-+                </figure>
-+                <figure class="gallery-item">
-+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=80" alt="Плавання у басейні">
-+                    <figcaption>
-+                        <span class="gallery-tag">Swimming</span>
-+                        <p>Технічна робота над стартами та поворотами у басейні.</p>
-+                    </figcaption>
-+                </figure>
-+                <figure class="gallery-item">
-+                    <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=1200&q=80" alt="Лазер-ран на стадіоні">
-+                    <figcaption>
-+                        <span class="gallery-tag">Laser-run</span>
-+                        <p>Комбіновані тренування з бігу та стрільби на свіжому повітрі.</p>
-+                    </figcaption>
-+                </figure>
-+                <figure class="gallery-item">
-+                    <img src="https://images.unsplash.com/photo-1530745342582-0795f23ec79c?auto=format&fit=crop&w=1200&q=80" alt="Командне святкування">
-+                    <figcaption>
-+                        <span class="gallery-tag">Team Spirit</span>
-+                        <p>Спільне святкування після перемоги на міжнародному турнірі.</p>
-+                    </figcaption>
-+                </figure>
-+                <figure class="gallery-item">
-+                    <img src="https://images.unsplash.com/photo-1546484959-fccfe9a2cd2b?auto=format&fit=crop&w=1200&q=80" alt="Підготовка спорядження">
-+                    <figcaption>
-+                        <span class="gallery-tag">Behind the Scenes</span>
-+                        <p>Підготовка спорядження перед стартами та детальний брифінг.</p>
-+                    </figcaption>
-+                </figure>
-+            </div>
-+        </section>
-+
-+        <section class="section instagram" id="instagram">
-+            <div class="instagram-card" data-reveal>
-+                <div class="instagram-header">
-+                    <div class="instagram-brand">
-+                        <span aria-hidden="true">IG</span>
-+                        <div>
-+                            <p class="instagram-title">@brigantina.club</p>
-+                            <p class="instagram-sub">Актуальні новини та закулісся клубу</p>
-+                        </div>
-+                    </div>
-+                    <a class="btn primary" href="https://www.instagram.com/brigantina.club" target="_blank" rel="noopener">Підписатися</a>
-+                </div>
-+                <div class="instagram-intro">
-+                    <p>Слідкуйте за прямими ефірами зі стартів, оглядами зборів та щоденними моментами команди. Щотижня — нові історії та поради від тренерів.</p>
-+                    <div class="instagram-stats">
-+                        <div>
-+                            <span class="stat-value">12k</span>
-+                            <span class="stat-label">підписників</span>
-+                        </div>
-+                        <div>
-+                            <span class="stat-value">1 540</span>
-+                            <span class="stat-label">публікацій</span>
-+                        </div>
-+                        <div>
-+                            <span class="stat-value">24/7</span>
-+                            <span class="stat-label">історії</span>
-+                        </div>
-+                    </div>
-+                </div>
-+                <div class="instagram-grid" data-instagram-grid data-reveal>
-+                    <!-- JS заповнить картки Instagram -->
-+                </div>
-+            </div>
-+        </section>
-+
-         <section class="section schedule" id="schedule">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Розклад</span>
-                 <h2>Щоденні тренування</h2>
-                 <p>Групові заняття проходять за фіксованим графіком, а персональні сесії узгоджуються з наставником.</p>
-             </div>
--            <div class="schedule-wrapper">
-+            <div class="schedule-wrapper" data-reveal>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Час</th>
-                             <th>Пн / Ср / Пт</th>
-                             <th>Вт / Чт</th>
-                             <th>Субота</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>07:00</td>
-                             <td>Плавання (основна група)</td>
-                             <td>Силова підготовка п'ятиборців</td>
-                             <td>Відкрите тренування у басейні</td>
-                         </tr>
-                         <tr>
-                             <td>10:00</td>
-                             <td>Фехтування (юніори)</td>
-                             <td>Індивідуальні сесії з тренерами</td>
-                             <td>Laser-run на стадіоні</td>
-                         </tr>
-                         <tr>
-                             <td>13:00</td>
-                             <td>Комплексна ОФП</td>
-@@ -388,157 +477,173 @@
-                             <td>Фехтування (основна команда)</td>
-                             <td>Плавання (спринтери)</td>
-                             <td>Командна стратегія стартів</td>
-                         </tr>
-                         <tr>
-                             <td>20:00</td>
-                             <td>Laser-run + OCR</td>
-                             <td>Спеціальна витривалість</td>
-                             <td>Закриття басейну 20:30</td>
-                         </tr>
-                     </tbody>
-                 </table>
-                 <aside>
-                     <h3>Графік роботи</h3>
-                     <ul>
-                         <li>Будні: 07:00 — 22:00</li>
-                         <li>Субота: 08:00 — 20:00</li>
-                         <li>Неділя: 09:00 — 18:00</li>
-                     </ul>
-                     <p>Попередній запис обов'язковий для індивідуальних занять, тестування та ознайомчого тижня.</p>
-                 </aside>
-             </div>
-         </section>
- 
-         <section class="section pricing" id="pricing">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Абонементи</span>
-                 <h2>Гнучкі пакети для спортсменів</h2>
-                 <p>Вартість вказана за місяць занять. Допоможемо обрати програму під ваш графік та спортивні цілі.</p>
-             </div>
--            <div class="pricing-grid">
-+            <div class="pricing-grid" data-reveal>
-                 <article class="pricing-card">
-                     <h3>Базовий</h3>
-                     <p class="price">3 200 ₴</p>
-                     <ul>
-                         <li>3 тренування на тиждень</li>
-                         <li>Доступ до басейну та фехтувальної зали</li>
-                         <li>Щомісячне тестування</li>
-                     </ul>
-                     <a href="#contact" class="btn secondary">Замовити</a>
-                 </article>
-                 <article class="pricing-card popular">
-                     <div class="tag">ТОП</div>
-                     <h3>Командний</h3>
-                     <p class="price">4 800 ₴</p>
-                     <ul>
-                         <li>5 тренувань на тиждень</li>
-                         <li>Участь у зборах та внутрішніх стартах</li>
-                         <li>План харчування та відновлення</li>
-                     </ul>
-                     <a href="#contact" class="btn primary">Обрати</a>
-                 </article>
-                 <article class="pricing-card">
-                     <h3>Преміум</h3>
-                     <p class="price">7 500 ₴</p>
-                     <ul>
-                         <li>Індивідуальна програма</li>
-                         <li>Повний доступ до інфраструктури</li>
-                         <li>Супровід на змаганнях</li>
-                     </ul>
-                     <a href="#contact" class="btn secondary">Замовити</a>
-                 </article>
-             </div>
-         </section>
- 
-         <section class="section cta">
--            <div class="cta-card">
-+            <div class="cta-card" data-reveal>
-                 <h2>Хочете приєднатися до збірної «Бригантини»?</h2>
-                 <p>Залиште заявку, і ми підберемо тренера та програму відповідно до вашого рівня. Перший тиждень — зі знижкою 50%.</p>
-                 <a class="btn primary" href="#contact">Залишити заявку</a>
-             </div>
-         </section>
- 
-         <section class="section faq" id="faq">
--            <div class="section-header">
-+            <div class="section-header" data-reveal>
-                 <span class="eyebrow">Питання</span>
-                 <h2>Відповіді на поширені запити</h2>
-                 <p>Не знайшли необхідну інформацію? Напишіть нам — менеджер відповість протягом робочого дня.</p>
-             </div>
--            <div class="faq-list">
-+            <div class="faq-list" data-reveal>
-                 <details>
-                     <summary>З якого віку можна приєднатися?</summary>
-                     <p>Приймаємо дітей від 7 років. Для дорослих доступні аматорські та професійні програми.</p>
-                 </details>
-                 <details>
-                     <summary>Чи можна відвідувати тільки плавання або фехтування?</summary>
-                     <p>Так, оберіть відповідну групу або індивідуальні заняття. Тренер допоможе сформувати графік.</p>
-                 </details>
-                 <details>
-                     <summary>Що потрібно для першого тренування?</summary>
-                     <p>Візьміть спортивний одяг, купальник або плавки, рушник та документ, що посвідчує особу. Обладнання надамо.</p>
-                 </details>
-                 <details>
-                     <summary>Чи проводите збори та виїзні тренування?</summary>
-                     <p>Так, організовуємо сезонні збори в Україні та за кордоном із повним тренерським супроводом.</p>
-                 </details>
-             </div>
-         </section>
- 
-         <section class="section contact" id="contact">
-             <div class="contact-grid">
--                <div class="contact-info">
-+                <div class="contact-info" data-reveal>
-                     <span class="eyebrow">Контакти</span>
-                     <h2>Запишіться на пробне тренування</h2>
-                     <p>Ми знаходимося за адресою <strong>м. Київ, Кільцева дорога 3-а</strong>. Заповніть форму — менеджер зв'яжеться з вами протягом дня.</p>
-                     <ul class="contact-list">
-                         <li><span>Телефон:</span> <a href="tel:+380441234567">+38 (044) 123-45-67</a></li>
-                         <li><span>Email:</span> <a href="mailto:info@brigantina.club">info@brigantina.club</a></li>
--                        <li><span>Соцмережі:</span> <a href="#">Instagram</a> · <a href="#">Facebook</a></li>
-+                        <li><span>Соцмережі:</span> <a href="https://www.instagram.com/brigantina.club" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
-                     </ul>
-                     <a class="map-link" href="https://maps.google.com/?q=50.412344,30.369876" target="_blank" rel="noopener">Прокласти маршрут на Google Maps</a>
-+                    <div class="contact-social">
-+                        <a href="https://t.me/brigantina_club" target="_blank" rel="noopener" aria-label="Telegram">
-+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 5.2a1.2 1.2 0 0 0-1.3-.13L3.7 12.1a.9.9 0 0 0 .1 1.7l4.4 1.4 1.7 5a.9.9 0 0 0 1.6.2l2.5-3.2 4.2 3.1a1 1 0 0 0 1.6-.6l2.3-13.5a1.1 1.1 0 0 0-.3-1.1ZM9.6 17.7l-.8-2.5 7.9-7.2-9.6 6.4-3-.9 15-6.8-9.5 11Z"/></svg>
-+                        </a>
-+                        <a href="https://www.tiktok.com/@brigantina.club" target="_blank" rel="noopener" aria-label="TikTok">
-+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 7.6c-2 0-3.7-1.6-3.7-3.6V3h-3.2v12.7a2.8 2.8 0 0 1-2.8 2.8 2.8 2.8 0 0 1 0-5.6c.4 0 .7 0 1 .1V9.6a6 6 0 1 0 5 5.9V9.4c.7.5 1.6.8 2.5.8Z"/></svg>
-+                        </a>
-+                        <a href="https://www.instagram.com/brigantina.club" target="_blank" rel="noopener" aria-label="Instagram">
-+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7Zm5 3.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5Zm0 2A1.5 1.5 0 1 0 13.5 12 1.5 1.5 0 0 0 12 10.5Zm5.2-3.7a.8.8 0 1 1-1.1 1.1.8.8 0 0 1 1.1-1.1Z"/></svg>
-+                        </a>
-+                    </div>
-                 </div>
--                <form class="contact-form">
-+                <form class="contact-form" data-reveal>
-                     <label>
-                         Ім'я
-                         <input type="text" name="name" placeholder="Ваше ім'я" required>
-                     </label>
-                     <label>
-                         Телефон
-                         <input type="tel" name="phone" placeholder="+38 (0XX) XXX-XX-XX" required>
-                     </label>
-                     <label>
-                         Напрям підготовки
-                         <select name="goal" required>
-                             <option value="">Оберіть секцію</option>
-                             <option>Плавання</option>
-                             <option>Фехтування</option>
-                             <option>Сучасне п'ятиборство</option>
-                             <option>Laser-run / OCR</option>
-                             <option>Індивідуальна програма</option>
-                         </select>
-                     </label>
-                     <label>
-                         Коментар
-                         <textarea name="message" rows="4" placeholder="Розкажіть про досвід та цілі"></textarea>
-                     </label>
-                     <button type="submit" class="btn primary">Надіслати заявку</button>
-                     <p class="form-note">Натискаючи кнопку, ви погоджуєтесь на обробку персональних даних.</p>
-                 </form>
-             </div>
-         </section>
-     </main>
- 
-     <footer class="footer">
-         <div class="footer-content">
-             <div>
-                 <strong>Спортивний клуб «Бригантина»</strong>
-                 <p>м. Київ, Кільцева дорога 3-а</p>
-             </div>
-             <a href="#top" class="to-top" aria-label="Повернутися нагору">⬆</a>
-+            <div class="footer-social">
-+                <a href="https://www.instagram.com/brigantina.club" target="_blank" rel="noopener">Instagram</a>
-+                <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-+                <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
-+            </div>
-             <p class="copyright">© <span id="year"></span> Бригантина. Усі права захищено.</p>
-         </div>
-     </footer>
- 
-     <script src="script.js"></script>
- </body>
- </html>
- 
-EOF
-)
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solar Power Engineering — сонячні електростанції Київ</title>
+  <meta name="description" content="Сонячні електростанції під ключ у Києві та області. Інвертори, панелі, монтаж, моніторинг. Solar Power Engineering." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>⚡️</text></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Solar Power Engineering — на головну">
+        <span class="brand__logo">⚡</span>
+        <span class="brand__text">Solar Power Engineering</span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Відкрити меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu" id="menu">
+        <a href="#about">Про нас</a>
+        <a href="#services">Послуги</a>
+        <a href="#benefits">Переваги</a>
+        <a href="#projects">Проєкти</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--sm" href="#contact">Заявка</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <h1 class="hero__title">Мала дія — великий вплив.</h1>
+        <p class="hero__subtitle">Проєктуємо та встановлюємо сонячні електростанції для дому й бізнесу. Київ і область.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#contact">Отримати консультацію</a>
+          <a class="btn btn--ghost" target="_blank" rel="noopener" href="https://instagram.com/solarpowerengineering">Instagram</a>
+        </div>
+        <ul class="hero__badges">
+          <li>AIKO / LONGi / JA Solar</li>
+          <li>Гарантія до 12 років</li>
+          <li>Моніторинг та сервіс</li>
+        </ul>
+      </div>
+      <div class="hero__card">
+        <div class="kpi">
+          <div><strong id="kpi-power">15</strong><span>кВт</span><small>СЕС для будинку</small></div>
+          <div><strong id="kpi-savings">-60%</strong><span>з рахунків</span><small>економія за рік</small></div>
+          <div><strong id="kpi-co2">7,2</strong><span>т/рік</span><small>CO₂ уникнено</small></div>
+        </div>
+        <img class="hero__img" src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1600&auto=format&fit=crop" alt="Сонячні панелі на даху">
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container grid-2">
+      <div class="card appear">
+        <h2>Хто ми</h2>
+        <p>Solar Power Engineering — команда інженерів, що впроваджує сонячну енергетику «під ключ»: від аудиту об’єкта до моніторингу та сервісу.</p>
+        <ul class="list">
+          <li>Адреса: вул. Ушакова, Київ, Україна 03179</li>
+          <li>Email: <a href="mailto:solarpower.eng.ua@gmail.com">solarpower.eng.ua@gmail.com</a></li>
+          <li>Телефон: <a href="tel:+380000000000">+38 (000) 000-00-00</a></li>
+        </ul>
+      </div>
+      <div class="card appear">
+        <h3>Що ви отримуєте</h3>
+        <ul class="checklist">
+          <li>Проєктування, підбір панелей і інверторів</li>
+          <li>Монтаж, пусконалагодження, документація</li>
+          <li>Гарантія та післяпродажний супровід</li>
+          <li>Встановлення систем зберігання енергії (акумулятори)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section__title">Послуги</h2>
+      <div class="cards-3">
+        <article class="card appear">
+          <h3>Домашні СЕС 5–30 кВт</h3>
+          <p>Рішення для приватних будинків з електричним опаленням та ГВП. Інвертори Huawei/GoodWe, панелі AIKO/LONGi.</p>
+          <ul class="tags"><li>Гібридні</li><li>On-Grid</li><li>Моніторинг</li></ul>
+        </article>
+        <article class="card appear">
+          <h3>Комерційні СЕС 30–500 кВт</h3>
+          <p>Оптимізація споживання підприємств. Net-billing, резервування, інтеграція з BMS.</p>
+          <ul class="tags"><li>Економія</li><li>Окупність</li><li>Стабільність</li></ul>
+        </article>
+        <article class="card appear">
+          <h3>Системи зберігання енергії</h3>
+          <p>Літій-іонні батареї 5–200 кВт·год. Безперебійність живлення критичних зон.</p>
+          <ul class="tags"><li>UPS</li><li>Off-Grid</li><li>Гарантія</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section section--alt" id="benefits">
+    <div class="container">
+      <h2 class="section__title">Чому з нами вигідно</h2>
+      <div class="cards-4">
+        <div class="card appear"><h4>Сертифіковане обладнання</h4><p>AIKO, LONGi, JA Solar, інвертори Huawei/GoodWe з офіційною гарантією.</p></div>
+        <div class="card appear"><h4>Прозорий розрахунок</h4><p>Кошторис з окупністю та прогнозом генерації за PVSyst-методологією.</p></div>
+        <div class="card appear"><h4>Швидкий монтаж</h4><p>Власні бригади. Акуратний кабель-менеджмент та безпека.</p></div>
+        <div class="card appear"><h4>Підтримка 24/7</h4><p>Онлайн-моніторинг, діагностика та сервісні виїзди.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (Gallery fed from JS) -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Реалізовані проєкти</h2>
+        <button class="btn btn--ghost" id="open-instagram">Відкрити Instagram</button>
+      </div>
+      <div id="gallery" class="gallery"></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section--alt" id="reviews">
+    <div class="container">
+      <h2 class="section__title">Відгуки клієнтів</h2>
+      <div class="carousel" id="carousel">
+        <div class="slide">
+          <p>“Поставили 15 кВт з акумулятором, взимку без відключень. Моніторинг зручний.”</p>
+          <span class="author">Олександр, Вишгород</span>
+        </div>
+        <div class="slide">
+          <p>“Окупність співпала з розрахунком, команда працює швидко й чисто.”</p>
+          <span class="author">Марина, Ірпінь</span>
+        </div>
+        <div class="slide">
+          <p>“Для складу зробили 60 кВт, рахунки зменшились майже вдвічі.”</p>
+          <span class="author">ТОВ “Логістика”</span>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="dot active" aria-label="1"></button>
+        <button class="dot" aria-label="2"></button>
+        <button class="dot" aria-label="3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="section__title">Питання та відповіді</h2>
+      <details class="faq"><summary>Скільки кВт потрібно для приватного будинку?</summary><p>Найчастіше 10–20 кВт. Ми робимо енергоаудит і підбираємо оптимальну конфігурацію.</p></details>
+      <details class="faq"><summary>Чи потрібні дозволи?</summary><p>Для мережевих/гібридних СЕС готуємо пакет документів, підключення — згідно вимог оператора мережі.</p></details>
+      <details class="faq"><summary>Що з сервісом та гарантією?</summary><p>Гарантія виробника на обладнання + наша інсталяційна гарантія. Доступний сервісний контракт.</p></details>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container grid-2">
+      <div class="card appear">
+        <h2>Залишіть заявку</h2>
+        <p>Опишіть об’єкт (площа даху/землі, поточна потужність вводу), додайте контакт — ми передзвонимо.</p>
+        <form id="lead-form" class="form">
+          <div class="form__row">
+            <label>Ваше ім'я</label>
+            <input name="name" required placeholder="Ім’я" />
+          </div>
+          <div class="form__row">
+            <label>Телефон</label>
+            <input name="phone" required placeholder="+38 (0XX) XXX-XX-XX" />
+          </div>
+          <div class="form__row">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="you@example.com" />
+          </div>
+          <div class="form__row">
+            <label>Повідомлення</label>
+            <textarea name="message" rows="4" placeholder="Коротко про об’єкт"></textarea>
+          </div>
+          <button class="btn" type="submit">Надіслати</button>
+          <p class="form__note" id="form-note" role="status"></p>
+        </form>
+      </div>
+      <div class="card appear">
+        <h3>Контакти</h3>
+        <ul class="list">
+          <li><strong>Адреса:</strong> вул. Ушакова, Київ, Україна 03179</li>
+          <li><strong>Email:</strong> <button class="link" data-copy="solarpower.eng.ua@gmail.com">solarpower.eng.ua@gmail.com</button></li>
+          <li><strong>Телефон:</strong> <button class="link" data-copy="+380000000000">+38 (000) 000-00-00</button></li>
+          <li><strong>Instagram:</strong> <a target="_blank" rel="noopener" href="https://instagram.com/solarpowerengineering">@solarpowerengineering</a></li>
+        </ul>
+        <div class="map">
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Ushakova%20Kyiv%20Ukraine&z=13&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <p>© <span id="year"></span> Solar Power Engineering. Усі права захищено.</p>
+      <a class="to-top" href="#home" aria-label="Вгору">↑</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Закрити">×</button>
+    <img id="lightbox-img" alt="Перегляд зображення">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
